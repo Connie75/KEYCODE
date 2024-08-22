@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norma Constanza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue; /* Cambia el color del fondo */
+        }
+        .parrafo {
+            color: darkblue;
+        }
+        .btn {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: green;
+            color: yellow;
+            transform: translateX(20px); /* Mueve el botón a la derecha */
+        }
+    </style>
+</head>    
+
+<body>
+<header>
+    <h1>Bienvenidos</h1>
+    <p>¡Hola a todos! ¿Cómo están? ¡Sean felices!</p>
+</header>
+<section>
+    <button class="btn">Haz clic aquí</button>
+</section>
+<script>
+    const name = "Norma";
+    const greeting = `Hello, my name is ${name}!`;
+    console.log(greeting);
+    // "Hello, my name is Norma!"
+</script>
+</body>
+</html>
