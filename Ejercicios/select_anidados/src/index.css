@@ -2,11 +2,29 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(45deg, #FFD100, #003893, #CE1126);
-  color: #4b0082; /* Violeta oscuro para texto principal */
+  background: linear-gradient(45deg, #FFD100, #003893, #CE1126); /* Amarillo, azul y rojo */
+  color: #000000; /* Negro para texto principal */
   position: relative;
   overflow: hidden;
 }
+
+/* Fondo con banderas */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://api-colombia.com/api/v1/Country/Colombia');
+  background-position: left top, right bottom, center;
+  background-size: 150px, 150px, 150px;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  opacity: 0.2; /* Ajusta la opacidad según tu preferencia */
+  z-index: -1; /* Mantiene el fondo detrás del contenido */
+  background-color: silver; /* Fondo plateado detrás de las banderas */
+}
+
 
 #root {
   display: flex;
@@ -20,35 +38,35 @@ body {
 
 h1 {
   font-size: 2.5rem;
-  color: #dcce75; /* Violeta más brillante para título */
+  color: #FFD100; /* Amarillo para título */
   margin-bottom: 0.5rem;
 }
 
 p {
   font-size: 1.2rem;
-  color: #dbd958; /* Violeta oscuro */
+  color: #092f68; /* Azul para texto */
   margin-bottom: 1rem;
 }
 
 hr {
   width: 80%;
-  border: 1px solid #e2d92b;
+  border: 1px solid #CE1126; /* Rojo para la línea */
   margin-bottom: 2rem;
 }
 
 .label-select {
   font-size: 1rem;
-  color: #d5dd5e; /* Violeta oscuro */
+  color: #003893; /* Azul para etiquetas */
   margin-bottom: 0.5rem;
 }
 
 select {
   padding: 0.5rem;
   font-size: 1rem;
-  border: 2px solid #8a2be2; /* Borde violeta brillante */
+  border: 2px solid #CE1126; /* Borde rojo */
   border-radius: 5px;
   background-color: #ffffff; /* Fondo blanco para selects */
-  color: #4b0082; /* Texto violeta oscuro */
+  color: #1b1c4e; /* Texto  */
   margin-bottom: 1rem;
   width: 100%;
   max-width: 300px; /* Limitar ancho máximo */
@@ -56,28 +74,9 @@ select {
 }
 
 select:hover {
-  border-color: #7b68ee; /* Tono más claro en hover */
+  border-color: #FFD100; /* Amarillo en hover */
 }
 
-/* Fondo con banderas */
-/* Fondo con banderas */
-body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/images/flags/flag1.png'), 
-                    url('/images/flags/flag2.png'), 
-                    url('/images/flags/flag3.png');
-  background-position: left top, right bottom, center;
-  background-size: 150px, 150px, 150px;
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  opacity: 0.2; /* Ajusta la opacidad según tu preferencia */
-  z-index: -1; /* Mantiene el fondo detrás del contenido */
-  background-color: silver; /* Fondo plateado detrás de las banderas */
-}
 
 /* Responsive */
 @media (max-width: 600px) {

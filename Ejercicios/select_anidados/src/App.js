@@ -1,6 +1,5 @@
 import React from 'react';
-import './App.css';
-import { Selects } from './Components/Selects';
+import { Selects } from './components/Selects';
 
 function App() {
   return (
